@@ -115,7 +115,7 @@ ax.plot(
     linewidth=2,
     label='Casual'
 )
-ax.set_title('Number of orders per month', loc='center',fontsize=30)
+ax.set_title('Number of rental per month', loc='center',fontsize=30)
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=20)
 ax.legend()
@@ -150,7 +150,7 @@ ax.plot(
     marker='o',
     label='Casual'
 )
-ax.set_title('Number of orders last 5 month', loc='center',fontsize=30)
+ax.set_title('Number of rental last 5 month', loc='center',fontsize=30)
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=20)
 ax.legend()
@@ -170,7 +170,7 @@ rects2 = ax.bar(x, casual, width, label='Casual', color='#09A603')
 rects3 = ax.bar(x + width, total, width, label='Total', color='#D90404')
 
 ax.set_ylabel(None)
-ax.set_title('Yearly Sharing Data', fontsize=30)
+ax.set_title('Yearly rental data', fontsize=30)
 ax.set_xticks(x)
 ax.set_xticklabels(labels)
 ax.tick_params(axis='y', labelsize=20)
@@ -193,7 +193,7 @@ rects2 = ax.bar(x, casual, width, label='Casual', color='#09A603')
 rects3 = ax.bar(x + width, total, width, label='Total', color='#D90404')
 
 ax.set_ylabel(None)
-ax.set_title('Seasonal Sharing Data', fontsize=30)
+ax.set_title('Seasonal rental data', fontsize=30)
 ax.set_xticks(x)
 ax.set_xticklabels(labels)
 ax.tick_params(axis='y', labelsize=20)

@@ -157,22 +157,22 @@ ax.legend()
 
 st.pyplot(fig)
 
-labels = yearly_sharing_df.index
-registered = yearly_sharing_df['registered']
-casual = yearly_sharing_df['casual']
-total = yearly_sharing_df['total']
-x = np.arange(len(labels))
+labels_yr = yearly_sharing_df.index
+registered_yr = yearly_sharing_df['registered']
+casual_yr = yearly_sharing_df['casual']
+total_yr = yearly_sharing_df['total']
+x_yr = np.arange(len(labels_yr))
 width = 0.25
 
 fig, ax = plt.subplots(figsize=(16, 8))
-rects1 = ax.bar(x - width, registered, width, label='Registered', color='#F29F05')
-rects2 = ax.bar(x, casual, width, label='Casual', color='#09A603')
-rects3 = ax.bar(x + width, total, width, label='Total', color='#D90404')
+ax.bar(x_yr - width, registered_yr, width, label='Registered', color='#F29F05')
+ax.bar(x_yr, casual_yr, width, label='Casual', color='#09A603')
+ax.bar(x_yr + width, total_yr, width, label='Total', color='#D90404')
 
 ax.set_ylabel(None)
-ax.set_title('Yearly rental data', fontsize=30)
-ax.set_xticks(x)
-ax.set_xticklabels(labels)
+ax.set_title('Rental differences in 2011 and 2012', fontsize=30)
+ax.set_xticks(x_yr)
+ax.set_xticklabels(labels_yr)
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=25)
 ax.legend()
@@ -188,9 +188,9 @@ total = season_sharing_df[('total', 'sum')]
 x = np.arange(len(labels))
 
 fig, ax = plt.subplots(figsize=(16, 8))
-rects1 = ax.bar(x - width, registered, width, label='Registered', color='#F29F05')
-rects2 = ax.bar(x, casual, width, label='Casual', color='#09A603')
-rects3 = ax.bar(x + width, total, width, label='Total', color='#D90404')
+ax.bar(x - width, registered, width, label='Registered', color='#F29F05')
+ax.bar(x, casual, width, label='Casual', color='#09A603')
+ax.bar(x + width, total, width, label='Total', color='#D90404')
 
 ax.set_ylabel(None)
 ax.set_title('Seasonal rental data', fontsize=30)
